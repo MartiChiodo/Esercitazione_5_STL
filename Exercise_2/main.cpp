@@ -20,6 +20,7 @@ int main()
         return 1;
     }
 
+    cout << endl;
 
     //eseguiamo dei test per verificare la correttezza della mesh importata
     if (!verificaEdges(mesh, toll_1D)){cout << "Alcune celle 1D sono dei lati degeneri." << endl;}

@@ -1,6 +1,7 @@
 #include "Utils.hpp"
 #include <fstream>
 #include <sstream>
+#include <iostream>
 #include <cmath>
 
 
@@ -320,7 +321,7 @@ double formula_Gauss_aree(const vector <Vector2d>& vertici){
     for (unsigned int i = 0; i < vertici.size() - 1; i++){
         area += vertici[i][0] * vertici[i+1][1] - vertici[i+1][0] * vertici[i][1];
     }
-    area +=  vertici[vertici.size()-1][0] * vertici[0][1] - vertici[vertici.size()-1][0] * vertici[0][1];
+    area +=  vertici[vertici.size()-1][0] * vertici[0][1] - vertici[vertici.size()-1][1] * vertici[0][0];
     area *= 0.5;
 
     return area;
